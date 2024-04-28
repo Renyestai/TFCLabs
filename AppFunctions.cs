@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using TFCLab1_Copy;
 
 namespace TFCLab1
 {
@@ -228,7 +229,7 @@ namespace TFCLab1
 			inputRichBox.SelectionFont = new Font(inputRichBox.Font, FontStyle.Regular);
 		}
 
-		public static void RunCompiler(RichTextBox inputRichBox, DataGridView dataGridViewLexer, DataGridView dataGridViewParser, ToolStripStatusLabel toolStripStatusLabelErrors, ToolStripStatusLabel toolStripStatusLabelClean)
+		public static void RunCompiler(RichTextBox inputRichBox, DataGridView dataGridViewLexer, DataGridView dataGridViewParser, ToolStripStatusLabel toolStripStatusLabelErrors, ToolStripStatusLabel toolStripStatusLabelClean, RichTextBox outputRichBox)
 		{
 			dataGridViewLexer.Rows.Clear();
 			dataGridViewParser.Rows.Clear();

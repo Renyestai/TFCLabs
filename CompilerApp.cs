@@ -2,7 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-  
+using TFCLab1_Copy;
+
 namespace TFCLab1
 {
 	public partial class CompilerApp : Form
@@ -193,12 +194,12 @@ namespace TFCLab1
 
 		private void StartBtn_Click(object sender, EventArgs e)
 		{
-			AppFunctions.RunCompiler(inputRichBox, dataGridViewLexer, dataGridViewParser, toolStripStatusLabelErrors, toolStripStatusLabelClean);
+			AppFunctions.RunCompiler(inputRichBox, dataGridViewLexer, dataGridViewParser, toolStripStatusLabelErrors, toolStripStatusLabelClean, outputRichBox);
 		}
 
 		private void ПускToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			AppFunctions.RunCompiler(inputRichBox, dataGridViewLexer, dataGridViewParser, toolStripStatusLabelErrors, toolStripStatusLabelClean);
+			AppFunctions.RunCompiler(inputRichBox, dataGridViewLexer, dataGridViewParser, toolStripStatusLabelErrors, toolStripStatusLabelClean, outputRichBox);
 
 		}
 
@@ -291,6 +292,21 @@ namespace TFCLab1
 		private void toolStripStatusLabelClean_Click(object sender, EventArgs e) //запуск метода Айронса
 		{
 
+		}
+
+		private void первыйБлокToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Lab6.BlockOne(inputRichBox, outputRichBox);
+		}
+
+		private void второйБлокToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Lab6.BlockTwo(inputRichBox, outputRichBox);
+		}
+
+		private void третийБлокToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Lab6.BlockThree(inputRichBox, outputRichBox);
 		}
 	}
 }
