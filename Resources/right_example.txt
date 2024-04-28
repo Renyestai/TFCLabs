@@ -1,0 +1,4 @@
+function Fun($a,$b)
+{
+return $a;
+}
