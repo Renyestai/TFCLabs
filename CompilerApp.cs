@@ -3,9 +3,12 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using TFCLab1_Copy;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TFCLab1
 {
+
 	public partial class CompilerApp : Form
 	{
 		private string filePath; // Путь к текущему открытому файлу
@@ -307,6 +310,50 @@ namespace TFCLab1
 		private void третийБлокToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Lab6.BlockThree(inputRichBox, outputRichBox);
+		}
+
+		private void лабораторнаяРабота5ToolStripMenuItem_Click(object sender, EventArgs e)
+		{	
+			dataGridViewParser.Rows.Clear();
+			// Синтаксический анализ
+			Lab5Parser parser = new Lab5Parser(inputRichBox.Text);
+			List<ParserError> errorParser = parser.Parse();
+			int numOfErrors = 0;
+			if (errorParser.Any()) // если ошибки есть
+			{
+				toolStripStatusLabelErrors.Image = Image.FromFile(@"Resources\error.png");
+				toolStripStatusLabelErrors.Text = errorParser.Count.ToString();
+				toolStripStatusLabelClean.Image = Image.FromFile(@"Resources\mop.png");
+
+				foreach (ParserError error in errorParser)
+				{
+					dataGridViewParser.Rows.Add(++numOfErrors, error.Message, error.Position);
+				}
+
+			}
+			else
+			{
+				toolStripStatusLabelErrors.Image = Image.FromFile(@"Resources\correct.png");
+				toolStripStatusLabelErrors.Text = "Ошибок не обнаружено";
+				toolStripStatusLabelClean.Image = null;
+			}
+
+		}
+
+		private void лабораторнаяРабота7ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			dataGridViewLexer.Rows.Clear();
+			dataGridViewParser.Rows.Clear();
+			// Лексический анализ
+			LexerLab7 _lexer = new LexerLab7();
+			List<Token> tokens = _lexer.Tokenize(inputRichBox.Text);
+			int NumType = 1;
+			foreach (Token token in tokens)
+			{
+				dataGridViewLexer.Rows.Add(++NumType, token.Type, token.Value, token.FirstPosition + " - " + token.SecondPosition);
+			}
+
+
 		}
 	}
 }

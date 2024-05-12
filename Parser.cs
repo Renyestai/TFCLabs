@@ -1,77 +1,43 @@
 ﻿using System.Collections.Generic;
-public class Parser
+using System.Linq;
+
+public partial class Parser
 {
-	private List<Token> tokens;
-	private List<Token> errorTokens;
-	private int current; // для отслеживания текущего индекса в списке токенов	 
-	private int currentState;
-	int tokenIndex = 0; // Индекс ожидаемого токена
-	int lineNumber = 1;
-	public Parser(List<Token> tokens)
+	protected string input;
+	protected int position;
+	protected List<ParserError> errors;
+	public bool IsLeftPartofParMet = false; // для скобок
+	public bool IsLeftPartofCurlyMet = false; // для фигурных скобок
+	public bool LastState = false; // для фигурных скобок
+	public Parser(string input)
 	{
-		this.tokens = tokens;
-		current = 0;
-		currentState = 1;
-		errorTokens = new List<Token>(); // Создаем список ошибок в конструкторе парсера
+		this.input = input;
+		position = 0;
+		errors = new List<ParserError>(); // Создаем список ошибок в конструкторе парсера
+
 	}
-
-	public List<Token> Parse()
+	public List<ParserError> Parse()
 	{
-		TokenType[] expectedSequence = new TokenType[]
-				 {
-		 TokenType.KeywordFunction,
-		 TokenType.FunctionIdentifier,
-		 TokenType.LeftParenthesis,
-		 TokenType.ArgumentIdentifier,
-		 TokenType.Comma,
-		 TokenType.ArgumentIdentifier,
-		 TokenType.RightParenthesis,
-		 TokenType.CurlyBrace,
-		 TokenType.KeywordReturn,
-		 TokenType.ArgumentIdentifier,
-		 TokenType.Operator,
-		 TokenType.ArgumentIdentifier,
-		 TokenType.Semicolon,
-		 TokenType.CurlyBrace
-				 };
-
-		foreach (Token token in tokens)
+		while (position < input.Length)
 		{
-
-			// Проверяем, является ли текущий токен пробелом
-			if (token.Type == TokenType.NewLine)
-			{
-				continue; // Пропускаем пробелы
-			}
-
-			// Если достигнут конец ожидаемой последовательности, сбрасываем индекс и начинаем заново
-			if (tokenIndex >= expectedSequence.Length)
-			{
-				tokenIndex = 0;
-				lineNumber++;
-			}
-			if (tokenIndex >= tokens.Count)
-			{
-
-				continue;
-			}
-			// Проверяем, соответствует ли текущий токен ожидаемому
-			if (token.Type != expectedSequence[tokenIndex])
-			{
-
-				if (token.Type == TokenType.Unacceptable)
-				{
-					errorTokens.Add(token);
-					continue;
-				}
-				errorTokens.Add(token);
-			}
-
-			// Увеличиваем индекс, если текущий токен соответствует ожидаемому
-			tokenIndex++;
+			StateKeywordFunction(input, ref position);
+			StateFunctionID(input, ref position);
+			StateLeftPar(input, ref position);
+			StateFirstArgID(input, ref position);
+			StateComma(input, ref position);
+			StateSecondArgID(input, ref position);
+			StateRightPar(input, ref position);
+			StateLeftCurly(input, ref position);
+			StateReturn(input, ref position);
+			StateFirstArg(input, ref position);
+			StateArifOperator(input, ref position);
+			StateSecondArg(input, ref position);
+			StateSemicolon(input, ref position);
+			StateRightCurly(input, ref position);
+			if (LastState) { break; }
 		}
 
-		return errorTokens;
+		return errors;
 	}
-	
+
 }

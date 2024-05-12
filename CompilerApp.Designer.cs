@@ -31,10 +31,10 @@ namespace TFCLab1
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompilerApp));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +65,12 @@ namespace TFCLab1
 			this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.изменитьШрифтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.остальныеЛРToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.лабораторнаяРабота5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.лабораторнаяРабота6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.первыйБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.второйБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.третийБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip = new System.Windows.Forms.ToolStrip();
 			this.createFileBtn = new System.Windows.Forms.ToolStripButton();
 			this.openFileBtn = new System.Windows.Forms.ToolStripButton();
@@ -106,12 +112,7 @@ namespace TFCLab1
 			this.toolStripStatusLabelMiddle = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabelRow = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fontDialog = new System.Windows.Forms.FontDialog();
-			this.остальныеЛРToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.лабораторнаяРабота5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.лабораторнаяРабота6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.первыйБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.второйБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.третийБлокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.лабораторнаяРабота7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitRichBoxContainer)).BeginInit();
@@ -369,6 +370,54 @@ namespace TFCLab1
 			this.изменитьШрифтToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
 			this.изменитьШрифтToolStripMenuItem.Text = "Изменить шрифт";
 			this.изменитьШрифтToolStripMenuItem.Click += new System.EventHandler(this.ИзменитьШрифтToolStripMenuItem_Click);
+			// 
+			// остальныеЛРToolStripMenuItem
+			// 
+			this.остальныеЛРToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.лабораторнаяРабота5ToolStripMenuItem,
+            this.лабораторнаяРабота6ToolStripMenuItem,
+            this.лабораторнаяРабота7ToolStripMenuItem});
+			this.остальныеЛРToolStripMenuItem.Name = "остальныеЛРToolStripMenuItem";
+			this.остальныеЛРToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+			this.остальныеЛРToolStripMenuItem.Text = "Остальные ЛР";
+			// 
+			// лабораторнаяРабота5ToolStripMenuItem
+			// 
+			this.лабораторнаяРабота5ToolStripMenuItem.Name = "лабораторнаяРабота5ToolStripMenuItem";
+			this.лабораторнаяРабота5ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+			this.лабораторнаяРабота5ToolStripMenuItem.Text = "Лабораторная работа 5";
+			this.лабораторнаяРабота5ToolStripMenuItem.Click += new System.EventHandler(this.лабораторнаяРабота5ToolStripMenuItem_Click);
+			// 
+			// лабораторнаяРабота6ToolStripMenuItem
+			// 
+			this.лабораторнаяРабота6ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.первыйБлокToolStripMenuItem,
+            this.второйБлокToolStripMenuItem,
+            this.третийБлокToolStripMenuItem});
+			this.лабораторнаяРабота6ToolStripMenuItem.Name = "лабораторнаяРабота6ToolStripMenuItem";
+			this.лабораторнаяРабота6ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+			this.лабораторнаяРабота6ToolStripMenuItem.Text = "Лабораторная работа 6";
+			// 
+			// первыйБлокToolStripMenuItem
+			// 
+			this.первыйБлокToolStripMenuItem.Name = "первыйБлокToolStripMenuItem";
+			this.первыйБлокToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.первыйБлокToolStripMenuItem.Text = "Первый блок";
+			this.первыйБлокToolStripMenuItem.Click += new System.EventHandler(this.первыйБлокToolStripMenuItem_Click);
+			// 
+			// второйБлокToolStripMenuItem
+			// 
+			this.второйБлокToolStripMenuItem.Name = "второйБлокToolStripMenuItem";
+			this.второйБлокToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.второйБлокToolStripMenuItem.Text = "Второй блок";
+			this.второйБлокToolStripMenuItem.Click += new System.EventHandler(this.второйБлокToolStripMenuItem_Click);
+			// 
+			// третийБлокToolStripMenuItem
+			// 
+			this.третийБлокToolStripMenuItem.Name = "третийБлокToolStripMenuItem";
+			this.третийБлокToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.третийБлокToolStripMenuItem.Text = "Третий блок";
+			this.третийБлокToolStripMenuItem.Click += new System.EventHandler(this.третийБлокToolStripMenuItem_Click);
 			// 
 			// toolStrip
 			// 
@@ -643,14 +692,14 @@ namespace TFCLab1
 			this.dataGridViewLexer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridViewLexer.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewLexer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle21.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridViewLexer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridViewLexer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridViewLexer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewLexer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodeColumn,
@@ -734,8 +783,8 @@ namespace TFCLab1
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
-			dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle22;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGridViewTextBoxColumn1.FillWeight = 16.31657F;
 			this.dataGridViewTextBoxColumn1.HeaderText = "№";
 			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -743,8 +792,8 @@ namespace TFCLab1
 			// 
 			// dataGridViewTextBoxColumn3
 			// 
-			dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle23;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dataGridViewTextBoxColumn3.FillWeight = 237.9982F;
 			this.dataGridViewTextBoxColumn3.HeaderText = "Неверный фрагмент";
 			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -752,8 +801,8 @@ namespace TFCLab1
 			// 
 			// dataGridViewTextBoxColumn4
 			// 
-			dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle24;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
 			this.dataGridViewTextBoxColumn4.FillWeight = 45.68528F;
 			this.dataGridViewTextBoxColumn4.HeaderText = "Местоположение";
 			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -832,51 +881,12 @@ namespace TFCLab1
 			this.toolStripStatusLabelRow.Text = "Строка:   Столбец:";
 			this.toolStripStatusLabelRow.ToolTipText = "Готово";
 			// 
-			// остальныеЛРToolStripMenuItem
+			// лабораторнаяРабота7ToolStripMenuItem
 			// 
-			this.остальныеЛРToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.лабораторнаяРабота5ToolStripMenuItem,
-            this.лабораторнаяРабота6ToolStripMenuItem});
-			this.остальныеЛРToolStripMenuItem.Name = "остальныеЛРToolStripMenuItem";
-			this.остальныеЛРToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-			this.остальныеЛРToolStripMenuItem.Text = "Остальные ЛР";
-			// 
-			// лабораторнаяРабота5ToolStripMenuItem
-			// 
-			this.лабораторнаяРабота5ToolStripMenuItem.Name = "лабораторнаяРабота5ToolStripMenuItem";
-			this.лабораторнаяРабота5ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.лабораторнаяРабота5ToolStripMenuItem.Text = "Лабораторная работа 5";
-			// 
-			// лабораторнаяРабота6ToolStripMenuItem
-			// 
-			this.лабораторнаяРабота6ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.первыйБлокToolStripMenuItem,
-            this.второйБлокToolStripMenuItem,
-            this.третийБлокToolStripMenuItem});
-			this.лабораторнаяРабота6ToolStripMenuItem.Name = "лабораторнаяРабота6ToolStripMenuItem";
-			this.лабораторнаяРабота6ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-			this.лабораторнаяРабота6ToolStripMenuItem.Text = "Лабораторная работа 6";
-			// 
-			// первыйБлокToolStripMenuItem
-			// 
-			this.первыйБлокToolStripMenuItem.Name = "первыйБлокToolStripMenuItem";
-			this.первыйБлокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.первыйБлокToolStripMenuItem.Text = "Первый блок";
-			this.первыйБлокToolStripMenuItem.Click += new System.EventHandler(this.первыйБлокToolStripMenuItem_Click);
-			// 
-			// второйБлокToolStripMenuItem
-			// 
-			this.второйБлокToolStripMenuItem.Name = "второйБлокToolStripMenuItem";
-			this.второйБлокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.второйБлокToolStripMenuItem.Text = "Второй блок";
-			this.второйБлокToolStripMenuItem.Click += new System.EventHandler(this.второйБлокToolStripMenuItem_Click);
-			// 
-			// третийБлокToolStripMenuItem
-			// 
-			this.третийБлокToolStripMenuItem.Name = "третийБлокToolStripMenuItem";
-			this.третийБлокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.третийБлокToolStripMenuItem.Text = "Третий блок";
-			this.третийБлокToolStripMenuItem.Click += new System.EventHandler(this.третийБлокToolStripMenuItem_Click);
+			this.лабораторнаяРабота7ToolStripMenuItem.Name = "лабораторнаяРабота7ToolStripMenuItem";
+			this.лабораторнаяРабота7ToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+			this.лабораторнаяРабота7ToolStripMenuItem.Text = "Лабораторная работа 7";
+			this.лабораторнаяРабота7ToolStripMenuItem.Click += new System.EventHandler(this.лабораторнаяРабота7ToolStripMenuItem_Click);
 			// 
 			// CompilerApp
 			// 
@@ -994,6 +1004,7 @@ namespace TFCLab1
 		private ToolStripMenuItem первыйБлокToolStripMenuItem;
 		private ToolStripMenuItem второйБлокToolStripMenuItem;
 		private ToolStripMenuItem третийБлокToolStripMenuItem;
+		private ToolStripMenuItem лабораторнаяРабота7ToolStripMenuItem;
 	}
 }
 

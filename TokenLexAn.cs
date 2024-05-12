@@ -1,4 +1,4 @@
-﻿public enum TokenType
+﻿public enum TokenTypeLexAn
 {
 	KeywordFunction = 1, // ключевое слово function 1
 	KeywordReturn,// ключевое слово return 2
@@ -21,15 +21,15 @@
 	Unacceptable    // недопустимый символ
 }
 
-public class Token
+public class TokenLexAn
 {
 	public int CodeType { get; set; } = 0;
-	public TokenType Type { get; set; }
+	public TokenTypeLexAn Type { get; set; }
 	public string Value { get; set; }
 	public int FirstPosition { get; set; }
 	public int SecondPosition { get; set; }
 	public string ErrorString { get; set; }
-	public Token(int codetype, TokenType type, string value, int firstposition, int secondposition, string errorstring)
+	public TokenLexAn(int codetype, TokenTypeLexAn type, string value, int firstposition, int secondposition, string errorstring)
 	{
 		CodeType = codetype;
 		Type = type;
