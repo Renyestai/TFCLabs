@@ -104,7 +104,7 @@ class Lab5Parser:Parser
 		else
 		{
 			// Если текущий символ не число, буква и не открывающая скобка, добавляем ошибку
-			errors.Add(new ParserError("Ожидалось число, буква или открывающая скобка", position, position));
+			errors.Add(new ParserError("Ожидалось число, буква или открывающая скобка", position, position, ErrorType.UnfinishedExpression));
 		}
 	}
 }
