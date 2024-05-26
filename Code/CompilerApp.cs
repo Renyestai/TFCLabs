@@ -353,6 +353,9 @@ namespace TFCLab1
 				dataGridViewLexer.Rows.Add(++NumType, token.Type, token.Value, token.FirstPosition + " - " + token.SecondPosition);
 			}
 
+			ParserLab7 parserLab7 = new ParserLab7();
+			
+			outputRichBox.Text = parserLab7.Parse(tokens).ToString();
 
 		}
 	}

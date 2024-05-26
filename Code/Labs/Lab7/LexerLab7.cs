@@ -72,6 +72,7 @@ public class LexerLab7
 					switch (input[i])
 					{
 						case '\t':
+						case '\n':
 						case ' ':
 							break;
 						case (char)13:

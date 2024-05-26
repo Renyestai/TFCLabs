@@ -68,9 +68,9 @@
 
 Для грамматики G[stmt] разработать и реализовать алгоритм анализа на основе метода рекурсивного спуска.
                 
- G[stmt]:
-1. stmt → IF exp stmt | IF exp stmt ELSE stmt | ID ASSIGN exp SEMICOLON
-2. exp -> TRUE | FALSE | exp OR exp | exp AND exp | NOT exp | exp
+    G[stmt]:
+    1. stmt → IF exp stmt | IF exp stmt ELSE stmt | ID ASSIGN exp SEMICOLON
+    2. exp -> TRUE | FALSE | exp OR exp | exp AND exp | NOT exp | exp
 
 
 > Примечание: ID – переменная Б{Б|Ц}, Б – {a, b, c, ...z, A, B, …, Z}, Ц – {0, 1, …, 9}, ASSIGN – ”==” | ”<” | ”<=” | ”>” | ”>=” | ”!=”
@@ -80,7 +80,7 @@
 ### Тестовые примеры
 
 ```lua
-3 штуки
-```
 
 ![Тест 1](/README_images/recursion_test_1.png)
+![Тест 2](/README_images/recursion_test_2.png)
+```
