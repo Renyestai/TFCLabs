@@ -79,6 +79,14 @@
 
 ### Тестовые примеры
 
+Первый тест
+
 ![Тест 1](/README_images/recursion_test_1.png)
+
+Второй тест
+
 ![Тест 2](/README_images/recursion_test_2.png)
+
+Третий тест
+
 ![Тест 3](/README_images/recursion_test_3.png)
