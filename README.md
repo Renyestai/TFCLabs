@@ -81,3 +81,4 @@
 
 ![Тест 1](/README_images/recursion_test_1.png)
 ![Тест 2](/README_images/recursion_test_2.png)
+![Тест 3](/README_images/recursion_test_3.png)
