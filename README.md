@@ -85,7 +85,7 @@
 
 Второй тест
 
-![Тест 2](/README_images/recursion_test_2.png)
+![Тест 2](/README_images/recursion_test_22.png)
 
 Третий тест
 
